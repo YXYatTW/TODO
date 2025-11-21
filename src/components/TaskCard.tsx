@@ -58,7 +58,7 @@ const EmojiContainer = styled.div`
   height: 22px;
   justify-content: center;
   align-items: center;
-`;
+`; //TODO： Make emoji dynamic based on task mood
 
 const DateContent = styled.p`
   color: #6d798e;
@@ -87,6 +87,7 @@ const ProgressBar = styled.div<{ progress: number }>`
   border-radius: 3px;
   transition: width 0.3s ease;
 `;
+//TODO: List Progress bar in  another file
 
 export const TaskCard: React.FC<TaskCardProps> = ({
   image,
@@ -117,7 +118,7 @@ export const TaskCard: React.FC<TaskCardProps> = ({
       <DescriptionContent>{description}</DescriptionContent>
       <DateContent>{date}</DateContent>
       <ProgressBarContainer>
-        <ProgressBar progress={progress} />
+        <ProgressBar progress={progress ?? 0} />
       </ProgressBarContainer>
     </CardWrapper>
   );
