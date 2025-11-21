@@ -9,18 +9,20 @@
     "lint": "eslint",
     "lint:fix": "eslint --fix .",
     "format": "prettier --write .",
-    "precheck": "npm run lint:fix && npm run format"
+    "pc": "npm run lint:fix && npm run format"
   },
   "dependencies": {
     "next": "16.0.3",
     "prettier": "^3.6.2",
     "react": "19.2.0",
-    "react-dom": "19.2.0"
+    "react-dom": "19.2.0",
+    "styled-components": "^6.1.19"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "babel-plugin-styled-components": "^2.1.4",
     "eslint": "^9",
     "eslint-config-next": "16.0.3",
     "typescript": "^5"
