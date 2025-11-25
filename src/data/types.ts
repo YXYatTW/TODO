@@ -3,7 +3,7 @@ export type TaskStatus = "TODO" | "INPROGRESS" | "DONE";
 export const allStatuses: TaskStatus[] = ["TODO", "INPROGRESS", "DONE"];
 
 export interface Task {
-  id: number;
+  id: string;
   title: string;
   description: string;
   status: TaskStatus;

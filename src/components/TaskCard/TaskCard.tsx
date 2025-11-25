@@ -16,6 +16,7 @@ import {
 } from "./TaskCard.styles";
 import { Task } from "@/data/types";
 import TaskImage from "@/components/TaskCard/TaskImage";
+import { useSortable } from "@dnd-kit/sortable";
 
 interface TaskCardProps {
   task: Task;
@@ -24,8 +25,30 @@ interface TaskCardProps {
 export const TaskCard = ({ task }: TaskCardProps) => {
   const { title, image, emoji, date, profileImage, description, progress } =
     task;
+  const {
+    attributes,
+    listeners,
+    setNodeRef,
+    isDragging,
+    transform,
+    transition,
+  } = useSortable({
+    id: task.id,
+  });
+
   return (
-    <CardWrapper>
+    <CardWrapper
+      ref={setNodeRef}
+      {...attributes}
+      {...listeners}
+      $isDragging={isDragging}
+      style={{
+        transform: transform
+          ? `translate3d(${transform.x}px, ${transform.y}px, 0)`
+          : undefined,
+        transition,
+      }}
+    >
       <TaskImage image={image} />
       <CardHeader>
         <CardTitleContainer>

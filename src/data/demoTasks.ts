@@ -1,6 +1,6 @@
 export const demoTasks = [
   {
-    id: 1,
+    id: "1",
     title: "Task 1",
     description: "This is a description of task 1",
     status: "TODO",
@@ -11,7 +11,7 @@ export const demoTasks = [
     profileImage: "/profile01.png",
   },
   {
-    id: 2,
+    id: "2",
     title: "Task 2",
     description: "This is a description of task 2",
     image: "/fuji.png",
@@ -23,7 +23,7 @@ export const demoTasks = [
     profileImage: "/profile02.png",
   },
   {
-    id: 3,
+    id: "3",
     title: "Task 3",
     description: "This is a description of task 3",
     status: "INPROGRESS",
@@ -34,7 +34,7 @@ export const demoTasks = [
     profileImage: "/profile01.png",
   },
   {
-    id: 4,
+    id: "4",
     title: "Task 4",
     description: "This is a description of task 4",
     status: "TODO",
